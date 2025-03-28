@@ -50,7 +50,9 @@ function FormCreateTodo(){
 
   <div className='TodoForm-buttonContainer'>
     
-  <button type="button" className={`TodoForm-button TodoForm-button--add ${isDescriptionValid ? '' : 'disabled'}`} onClick={onClose}>Cancelar</button>
+  <button type="button" className={`
+    TodoForm-button--cancel
+    TodoForm-button TodoForm-button--add ${isDescriptionValid ? '' : 'disabled'}`} onClick={onClose}>Cancelar</button>
 
   <button className='TodoForm-button TodoForm-button--add'>Agregar</button>
 

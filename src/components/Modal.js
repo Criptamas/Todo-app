@@ -4,7 +4,7 @@ import './FormCreateTodo.css'
 
 function Modal({ children }) {
  return ReactDOM.createPortal(
-   <div className="ModalBackground">
+   <div className="Modal">
      {children}
    </div>,
    document.getElementById('modal')

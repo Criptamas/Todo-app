@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useLocalStorage } from '../hooks/useLocalStorage'
 
 const TodoContext = React.createContext()
@@ -42,7 +42,7 @@ const addTodo = (text) =>{
   saveTodos(newTodos)
 }
 
-useEffect(()=>{
+React.useEffect(()=>{
   
 if (newTodoValue) {
   const isDuplicate = todos.some(todo => todo.text.toLowerCase() === newTodoValue.toLowerCase());
@@ -75,19 +75,19 @@ const deleteTodo = (text) =>{
     {{
       loading,
       error,
+      valor,
+      setValor,
+      openModal, 
+      setOpenModal,
+      validSatus,
+      newTodoValue, 
+      setNewTodoValue,
       todosCompleted,
       totalTodos,
       searchedTodos,
       completeTodo,
       deleteTodo,
-      valor,
-      setValor,
-      openModal, 
-      setOpenModal,
-      addTodo,
-      validSatus,
-      newTodoValue, 
-      setNewTodoValue
+      addTodo
     }}
   >
     {children}
