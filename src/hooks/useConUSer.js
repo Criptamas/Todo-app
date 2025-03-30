@@ -1,9 +1,8 @@
 import React from 'react';
 import { useLocalStorage } from '../hooks/useLocalStorage'
 
-const TodoContext = React.createContext()
 
-export function TodoProvider ({ children }) {
+function useConUSer () {
  
  const 
  {
@@ -69,10 +68,7 @@ const deleteTodo = (text) =>{
  saveTodos(newTodos)
 }
 
- return (
-  <TodoContext.Provider
-    value=
-    {{
+ return {
       loading,
       error,
       valor,
@@ -88,11 +84,7 @@ const deleteTodo = (text) =>{
       completeTodo,
       deleteTodo,
       addTodo
-    }}
-  >
-    {children}
-  </TodoContext.Provider>
-  )
+    }
 }
 
-export const useConUSer =()=> React.useContext(TodoContext)
+export { useConUSer }

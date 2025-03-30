@@ -1,10 +1,9 @@
 import React from 'react'
-import { useConUSer } from '../context/TodoContext'
 import './TodoCounter.css'
 
-function TodoCounter(){
+function TodoCounter({todosCompleted, totalTodos}){
   
-  const { todosCompleted, totalTodos } = useConUSer()
+
 
  return(
    <h1 className="TodoCounter">

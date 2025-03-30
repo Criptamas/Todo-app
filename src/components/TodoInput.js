@@ -1,11 +1,9 @@
 import  React from 'react';
 import './TodoInput.css'
-import {  useConUSer } from '../context/TodoContext';
 
-function TodoInput()
+function TodoInput({ valor, setValor })
 {
 
-  const { valor, setValor } = useConUSer()
 
   return(
 

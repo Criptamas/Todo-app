@@ -1,15 +1,12 @@
 import React from 'react'
-import { useConUSer } from '../context/TodoContext'
 import './FormCreateTodo.css'
 
-function FormCreateTodo(){
- const 
- {
+function FormCreateTodo({ 
   addTodo,
   setOpenModal,
   newTodoValue,
-  setNewTodoValue,
- } = useConUSer()
+  setNewTodoValue
+}){
 
  
  const isDescriptionValid = (newTodoValue.length > 1) ? true : false
