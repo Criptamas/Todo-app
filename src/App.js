@@ -70,18 +70,18 @@ function App() {
         <p>Upps!! No se ha encontrado: {searchText}</p>
       )}
 
+      onSearchedTodos={(todo, index) =>(
+        <TodoItem
+        key={index}
+        text={todo.text} 
+        completed={todo.completed}
+        onComplete={()=>{ completeTodo(todo.text)}}
+        onDelete={()=> {deleteTodo(todo.text)}}
+        />
+      )}
+
     >
-      {
-        (todo, index) =>(
-          <TodoItem
-          key={index}
-          text={todo.text} 
-          completed={todo.completed}
-          onComplete={()=>{ completeTodo(todo.text)}}
-          onDelete={()=> {deleteTodo(todo.text)}}
-          />
-        )
-      }
+      
     </ TodoList>
     
     <CreateTodoButton 

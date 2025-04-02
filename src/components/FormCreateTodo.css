@@ -11,7 +11,7 @@ form {
  border: 2px solid #000000;
  border-radius: 8px;
  box-shadow: 30px 30px 0px #000000;
- transition: 0.2s;
+ transition: 0.3s;
 }
 
 label {
@@ -44,9 +44,7 @@ textarea::placeholder {
  font-weight: 400
 }
 
-textarea:focus {
- outline-color: #000000
-}
+
 
 .TodoForm-buttonContainer {
  margin-top: 14px;
@@ -98,12 +96,8 @@ textarea:focus {
  box-shadow: 0px 0px 0px;
 }
 
-.TodoForm-button--cancel {
- background: #ff8684;
-}
-
 .TodoForm-button--cancel:hover {
- box-shadow: 10px 10px 0px #bb0300;
+ box-shadow: 10px 10px 0px #530704;
 }
 
 .Modal {
@@ -116,11 +110,11 @@ textarea:focus {
  justify-content: center;
  align-items: center;
  background: radial-gradient(circle at 50% 125%,
-   #6fc104 10%,
-   #fffb00 25%,
-   #d92e7f 58%,
-   #9b36b7 76%,
-   #005399
+  #6fc104 10%,
+  #fffb00 25%,
+  #d92e7f 58%,
+  #9b36b7 76%,
+  #005399
  );
  transition: 0.6s;
 }

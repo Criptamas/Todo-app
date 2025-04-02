@@ -1,10 +1,10 @@
 import './TodoList.css'
 
 function TodoList(props){
-  
+  const resultDefault = props.children || props.onSearchedTodos
 
 
- return(
+  return(
   <section>
     {props.error && props.onError()}
 
@@ -12,9 +12,9 @@ function TodoList(props){
 
     {(!props.loading && !props.totalTodos) && props.onEmtyTodos()}
 
-    {(!!props.totalTodos && !props.searchedTodos.length)&& props.onEmtySearh(props.searchText)}
+    {(!!props.totalTodos && !props.searchedTodos.length) && props.onEmtySearh(props.searchText)}
 
-    {props.searchedTodos.map(props.children)}
+    {props.searchedTodos.map(resultDefault)}
 
     <ul>
       {props.children}
